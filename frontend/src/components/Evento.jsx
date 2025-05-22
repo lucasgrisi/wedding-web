@@ -84,7 +84,7 @@ const Evento = () => {
                 </Typography>
             </Grid>
             <Grid item xs={12}>
-                <APIProvider apiKey={'AIzaSyAn2cZqsJKEQeoLcfH4uCkY3E7llkeKQ9g'}>
+                <APIProvider apiKey={process.env.REACT_APP_GOOGLE_API_KEY}>
                     <div style={{ height: '400px', width: '100%' }}>
                     <Map defaultCenter={position} defaultZoom={15} mapId={'8c0d1b1f23866063'}>
                         <AdvancedMarker position={position}>

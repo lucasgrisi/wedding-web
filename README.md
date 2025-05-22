@@ -23,6 +23,7 @@ Create a `.env` file in the `frontend/` directory with the following variables:
 
 ```env
 REACT_APP_MERCADOPAGO_PUBLIC_KEY=your_mercadopago_public_key_here
+REACT_APP_GOOGLE_API_KEY=your_google_api_key_here
 ```
 
 ### Backend Environment Variables

@@ -1,0 +1,21 @@
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.countdown-circle {
+    /* background-image: url('../assets/girassol.svg'); */
+    background-color: #206955; /* Blue color */
+    color: #F5F4F1;
+}
+
+.countdown-item {
+    text-align: center;
+    margin: 10px;
+}
+
+.countdown-desc {
+    background-color: #206955; /* Blue color */
+    color: #F5F4F1;
+}

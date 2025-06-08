@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// const baseUrl = 'https://api.grisibruna.com';
-const baseUrl = 'http://localhost:8000';
+const baseUrl = 'http://ec2-52-14-211-204.us-east-2.compute.amazonaws.com';
+// const baseUrl = 'http://localhost:8000';
 
 axios.interceptors.request.use(
     function(config) {

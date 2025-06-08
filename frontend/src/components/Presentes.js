@@ -170,7 +170,11 @@ const Presentes = () => {
                 <Card sx={{ maxWidth: 400 }} style={{ margin: 'auto' }}>
                 <CardMedia
                     component="img"
-                    height="200"
+                    sx={{
+                        height: 200,
+                        width: '100%',
+                        objectFit: 'contain', // or 'scale-down' to prevent upscaling
+                    }}
                     image={card.img}
                     alt={card.title}
                 />

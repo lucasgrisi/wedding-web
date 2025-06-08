@@ -29,6 +29,12 @@ const Presenca = () => {
                 value = 1;
             }
         }
+        if (field == 'nChildren') {
+            value = parseInt(value);
+            if (value < 0) {
+                value = 0;
+            }
+        }
         setPresencaCache(
             produce((draft) => {
                 draft[field] = value
@@ -217,6 +223,7 @@ const Presenca = () => {
                             <TextField fullWidth required id="name-input" label="Nome Completo" variant="outlined" value={presencaCache.name} onChange={(evt) => handleOnChange('name', evt.target.value)} />
                             <Grid xs={12} style={{ display: 'flex', justifyContent: 'center', width: '100%', marginTop: '10px' }}>
                                 {/* <TextField id="adults-input" type='number' fullWidth required label="Quantos adultos? Incluindo você" style={{ marginRight:'5px' }} value={presencaCache.nAdults} onChange={(evt) => handleOnChange('nAdults', evt.target.value)} /> */}
+                                <Grid xs={6}>
                                 <FormControl fullWidth>
                                     <InputLabel id="adults-input">Quantos adultos? Incluindo você</InputLabel>
                                     <Select
@@ -230,6 +237,10 @@ const Presenca = () => {
                                         <MenuItem value={2}>2</MenuItem>
                                     </Select>
                                 </FormControl>
+                                </Grid>
+                                <Grid xs={6}>
+                                <TextField id="children-input" type='number' fullWidth required label="Quantas crianças? Abaixo de 14 anos." style={{ marginRight:'5px' }} value={presencaCache.nChildren} onChange={(evt) => handleOnChange('nChildren', evt.target.value)} />
+                                </Grid>
                             </Grid>
                             <TextField fullWidth required id="email-input" label="Email" variant="outlined" style={{ marginTop: '10px' }} helperText="Você poderá receber informações adicionais nesse e-mail" value={presencaCache.email} onChange={(evt) => handleOnChange('email', evt.target.value)} />
                             

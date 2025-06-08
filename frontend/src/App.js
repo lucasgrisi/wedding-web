@@ -19,7 +19,7 @@ function App() {
     {title: 'Home', route: '/'}, 
     {title: 'RSVP', route: '/presenca'},
     {title: 'Cerimônia', route: '/cerimonia'}, 
-    {title: 'Dicas', route: '/dicas'},
+    // {title: 'Dicas', route: '/dicas'},
     {title: 'Presentes', route: '/presentes'},
   ];
 
@@ -89,7 +89,7 @@ function App() {
         <Route path="/presentes" element={<Presentes />} />
         <Route path="/checkout" element={< CheckOut/>}/>
         <Route path="/presenca" element={<Presenca />} />
-        <Route path="/dicas" element={<Dicas />} />
+        {/* <Route path="/dicas" element={<Dicas />} /> */}
         <Route path="/adminlogin" element={<AdminLogin />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/gratidao" element={<Gratidao />} />

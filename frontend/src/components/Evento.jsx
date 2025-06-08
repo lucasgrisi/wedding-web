@@ -38,10 +38,10 @@ const Evento = () => {
                     <li>23:30 - Banda D'Breck</li>
                     <li>1:00  - Final da festa</li>
                 </ul> */}
-                A cerimônia e recepção vão ser no mesmo local, no Pier 31.
+                A cerimônia e recepção vão ser no mesmo local, no XXXX (Local)
                 <br/>
                 <br/>
-                Começará pontualmente às 16:00h (e a noiva será pontual, haha). 
+                Começará pontualmente às XXX *horário
                 <br/>
                 <br/>
                 Por favor, cheguem cedo para aproveitarmos juntos todas as etapas do casamento❣️
@@ -66,14 +66,14 @@ const Evento = () => {
             </Grid>
             <Grid item xs={12}>
             <Typography variant="body1" fontFamily="Simonetta">
-               Espaço para eventos: Pier 31
+               Espaço para eventos: XXX
                 <br/> 
                 Endereço:
-                <br/> Rua Três, 31 - Barra de Jangada, 
+                <br/> Rua XXXXX
                 <br/>
-                Jaboatão dos Guararapes - PE, 
+                Aldeia - PE, 
                 <br/>
-                CEP: 54490-282
+                CEP: XXXX
                 </Typography>
                 {/* <Divider  style={{ marginTop: '20px', marginBottom: '20px' }}/> */}
                 <Typography variant="body1" fontFamily="Simonetta">

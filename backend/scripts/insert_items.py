@@ -14,19 +14,19 @@ def currency_to_float(currency_str):
     # Convert to float
     return float(currency_str)
 
-with open('items.csv', 'r') as f:
+with open('items_maria_e_diogo.csv', 'r') as f:
     csv_reader = csv.reader(f)
     headers = next(csv_reader)
     print(headers)
     for i, row in enumerate(csv_reader):
         relevance =  i
-        quantity = int(row[0])
+        quantity = int(row[0]) if row[0] else 1
         title = row[1]
-        total_price = currency_to_float(row[2])
-        price = currency_to_float(row[3])
+        price = currency_to_float(row[2])
+        total_price = quantity * price
         sold = 0
         available = True
-        img = row[7]
+        img = row[4]
         collection.insert_one({
             'relevance': relevance,
             'quantity': quantity,

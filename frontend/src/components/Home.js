@@ -5,6 +5,7 @@ import { Grid, Typography } from "@mui/material";
 import CountdownTimer from './CountdownTimer';
 import './Home.css';
 import '../App.css';
+import Settings from '../settings';
 
 const Home = () => {
     const isMobile = window.innerWidth < 900;
@@ -21,14 +22,14 @@ const Home = () => {
                 <Typography variant="h2" fontFamily="Dancing Script">Bruna & Lucas</Typography>
             </Grid> */}
             <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center' }}>
-                <Typography className='green-color' variant={isMobile ? "h4" : "h2"} fontFamily="Amsterdam">Bruna & Lucas</Typography>
+                <Typography className='green-color' variant={isMobile ? "h4" : "h2"} fontFamily="Amsterdam">{Settings.coupleName}</Typography>
             </Grid>
             <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <Typography variant={isMobile ? "h6" : "h5"} fontFamily="Simonetta">16.11.2024</Typography>
+                <Typography variant={isMobile ? "h6" : "h5"} fontFamily="Simonetta">24.01.2026</Typography>
             </Grid>
 
             <Grid item xs={12} sx={{ marginTop: '20px' }}>
-                <CountdownTimer targetDate={"11/16/2024"} />
+                <CountdownTimer targetDate={Settings.weddingDate} />
             </Grid>
         </Grid>
         </Container>
@@ -45,14 +46,12 @@ const Home = () => {
                 Criamos esse site para compartilhar com vocês os detalhes da organização do nosso casamento. 
                 <br/><br/>
                 Estamos muito felizes e contamos com a presença de todos no nosso grande dia!
-                <br/>
-                Já estamos ansiosos para encontrá-los e precisamos que confirmem suas presenças. 
-                <br/>
-                Para isso, clique no "RSVP" (Confirme sua Presença) e preencha os dados necessários.
-                 <br/><br/>
-                Temos outras dicas nas abas, fiquem à vontade!  
                 <br/><br/>
-                Aguardamos vocês!! 🤍
+                Já estamos ansiosos para encontrá-los e precisamos que confirmem suas presenças. 
+                <br/><br/>
+                Para isso, clique no "RSVP" (Confirme sua Presença) e preencha os dados necessários.
+                <br/><br/>
+                Aguardamos vocês! 🤍
                 </Typography>
             </Grid>
             {/* <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '20px' }}>

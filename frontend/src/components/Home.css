@@ -1,5 +1,5 @@
 .container {
-    background-image: url('../assets/IMG_0571.png'); /* Imagem de fundo sobreposta */
+    /* background-image: url('../assets/IMG_0571.png'); Imagem de fundo sobreposta */
     background-position: center top 0;
     background-size: cover;
     background-color: rgba(255, 255, 255, 0.4); /* Cor de fundo com transparência */
@@ -17,7 +17,7 @@
 }
 
 .bg-2 {
-    background-image: url('../assets/IMG_0571.png'); /* Imagem de fundo sobreposta */
+    /* background-image: url('../assets/IMG_0571.png'); */
     background-position: center top 45%;
     background-size: cover;
     height: 60vh;

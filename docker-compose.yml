@@ -1,13 +1,13 @@
 services:
-  frontend:
-    build:
-      context: ./frontend
-    ports:
-      - "3000:3000"
-    depends_on:
-      - backend
-    environment:
-      - NODE_ENV=development
+  # frontend:
+  #   build:
+  #     context: ./frontend
+  #   ports:
+  #     - "3000:3000"
+  #   depends_on:
+  #     - backend
+  #   environment:
+  #     - NODE_ENV=development
 
   backend:
     build:

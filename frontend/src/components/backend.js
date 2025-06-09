@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseUrl = 'http://ec2-52-14-211-204.us-east-2.compute.amazonaws.com';
+const baseUrl = 'https://api.marialeticiaediogo.com';
 // const baseUrl = 'http://localhost:8000';
 
 axios.interceptors.request.use(

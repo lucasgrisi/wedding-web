@@ -10,6 +10,21 @@ import Settings from '../settings';
 const Home = () => {
     const isMobile = window.innerWidth < 900;
 
+    function renderTitle() {
+        if (isMobile) {
+            return (
+                <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center' }}>
+                    <Typography className='green-color' variant="h5" fontFamily="Amsterdam">{Settings.coupleName}</Typography>
+                </Grid>
+            )
+        }
+        return (
+            <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center' }}>
+                <Typography className='green-color' variant="h2" fontFamily="Amsterdam">{Settings.coupleName}</Typography>
+            </Grid>
+        )
+    }
+
     return (
         <>
     <div style={{ flexGrow: 1 }} className='container'>
@@ -21,15 +36,13 @@ const Home = () => {
             {/*<Grid item xs={8} sx={{ display: 'flex', justifyContent: 'center' }}>
                 <Typography variant="h2" fontFamily="Dancing Script">Bruna & Lucas</Typography>
             </Grid> */}
-            <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center' }}>
-                <Typography className='green-color' variant={isMobile ? "h4" : "h2"} fontFamily="Amsterdam">{Settings.coupleName}</Typography>
-            </Grid>
+            {renderTitle()}
             <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <Typography variant={isMobile ? "h6" : "h5"} fontFamily="Simonetta">24.01.2026</Typography>
+                <Typography variant={isMobile ? "h7" : "h5"} fontFamily="Simonetta">24.01.2026</Typography>
             </Grid>
 
             <Grid item xs={12} sx={{ marginTop: '20px' }}>
-                <CountdownTimer targetDate={Settings.weddingDate} />
+                <CountdownTimer targetDate={Settings.weddingDate} isMobile={isMobile} />
             </Grid>
         </Grid>
         </Container>
@@ -43,15 +56,17 @@ const Home = () => {
         <Grid container spacing={1.5} direction="row" justifyContent="center" alignItems="center" style={{ padding: '20px'}}>
             <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
                 <Typography variant='body1' fontFamily="Simonetta">
-                Criamos esse site para compartilhar com vocês os detalhes da organização do nosso casamento. 
+                Depois de tantas histórias, desafios e alegrias juntos, chegou a hora de celebrarmos nosso amor e 
+                união ao lado das pessoas que mais amamos, nossos queridos amigos e familiares.
                 <br/><br/>
-                Estamos muito felizes e contamos com a presença de todos no nosso grande dia!
+                Criamos este espaço especial para compartilhar todos os detalhes do nosso casamento. 
+                Aproveitem para confirmar a presença clicando em "RSVP" e para conhecer nossa lista de presentes.
                 <br/><br/>
-                Já estamos ansiosos para encontrá-los e precisamos que confirmem suas presenças. 
+                Estamos ansiosos para dividir essa felicidade com cada um de vocês. Obrigado por fazerem parte da nossa história! 
                 <br/><br/>
-                Para isso, clique no "RSVP" (Confirme sua Presença) e preencha os dados necessários.
-                <br/><br/>
-                Aguardamos vocês! 🤍
+                Com carinho,
+                <br/>
+                Maria Letícia & Diogo 
                 </Typography>
             </Grid>
             {/* <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '20px' }}>

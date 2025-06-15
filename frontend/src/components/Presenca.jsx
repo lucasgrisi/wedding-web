@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Grid, Typography, Container, FormControl, TextField, Paper, Checkbox, FormControlLabel, Input, InputLabel, Button, CircularProgress, Alert, Select, MenuItem } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import Logo from '../assets/logo.png';
+import Logo from '../assets/LD-logo.png';
 import InputMask from 'react-input-mask';
 import { produce } from "immer";
 import backend from './backend';
@@ -239,7 +239,7 @@ const Presenca = () => {
                                 </FormControl>
                                 </Grid>
                                 <Grid xs={6}>
-                                <TextField id="children-input" type='number' fullWidth required label="Quantas crianças? Abaixo de 14 anos." style={{ marginRight:'5px' }} value={presencaCache.nChildren} onChange={(evt) => handleOnChange('nChildren', evt.target.value)} />
+                                <TextField id="children-input" type='number' fullWidth required label="Quantas crianças? A partir de 10 anos." style={{ marginRight:'5px' }} value={presencaCache.nChildren} onChange={(evt) => handleOnChange('nChildren', evt.target.value)} />
                                 </Grid>
                             </Grid>
                             <TextField fullWidth required id="email-input" label="Email" variant="outlined" style={{ marginTop: '10px' }} helperText="Você poderá receber informações adicionais nesse e-mail" value={presencaCache.email} onChange={(evt) => handleOnChange('email', evt.target.value)} />

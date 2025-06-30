@@ -6,7 +6,7 @@
 
 .countdown-circle {
     /* background-image: url('../assets/girassol.svg'); */
-    background-color: #206955; /* Blue color */
+    background-color: #62724E; /* Blue color */
     color: #F5F4F1;
 }
 
@@ -16,6 +16,6 @@
 }
 
 .countdown-desc {
-    background-color: #206955; /* Blue color */
+    background-color: #62724E; /* Blue color */
     color: #F5F4F1;
 }

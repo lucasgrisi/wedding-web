@@ -232,13 +232,13 @@ export default function CheckOut() {
                         </List>
                         {cartInfo.length > 0 ? (
                             <>
-                            <Button variant='outlined' style={{ marginTop: '20px', marginRight: '5px', color: '#206955', borderColor: '#206955' }} onClick={() => navigate('/presentes')}>Continuar comprando</Button>
-                            <Button variant='contained' style={{ marginTop: '20px', marginLeft: '5px', backgroundColor: '#206955' }} onClick={handleContinue}>Finalizar compra</Button>
+                            <Button variant='outlined' style={{ marginTop: '20px', marginRight: '5px', color: '#62724E', borderColor: '#62724E' }} onClick={() => navigate('/presentes')}>Continuar comprando</Button>
+                            <Button variant='contained' style={{ marginTop: '20px', marginLeft: '5px', backgroundColor: '#62724E' }} onClick={handleContinue}>Finalizar compra</Button>
                             </>
                         ) : (
                             <>
                             <Typography style={{ marginTop: '40px' }} color='grey'>Nenhum item no carrinho.</Typography>
-                            <Button variant='outlined' style={{ marginTop: '20px', marginRight: '20px', color: '#206955', borderColor: '#206955' }} onClick={() => navigate('/presentes')}>Voltar</Button>
+                            <Button variant='outlined' style={{ marginTop: '20px', marginRight: '20px', color: '#62724E', borderColor: '#62724E' }} onClick={() => navigate('/presentes')}>Voltar</Button>
                             <Button variant='contained' style={{ marginTop: '20px' }} disabled>Continuar</Button>
                             </>
                         )}
@@ -264,15 +264,15 @@ export default function CheckOut() {
                             </Grid>
                         ): (
                             <>
-                            <Button variant='outlined' style={{ marginTop: '20px', marginRight: '20px', color: '#206955', borderColor: '#206955' }} onClick={handleBack}>Voltar</Button>
-                            <Button variant='contained' style={{ marginTop: '20px', backgroundColor: '#206955' }} onClick={saveMsgAndContinue}>Continuar</Button>
+                            <Button variant='outlined' style={{ marginTop: '20px', marginRight: '20px', color: '#62724E', borderColor: '#62724E' }} onClick={handleBack}>Voltar</Button>
+                            <Button variant='contained' style={{ marginTop: '20px', backgroundColor: '#62724E' }} onClick={saveMsgAndContinue}>Continuar</Button>
                             </>
                         )}
                         </>
                     ) : (
                         <>
                         <Wallet initialization={{ preferenceId: walletPrefId }} customization={{ texts:{ valueProp: 'smart_option'}}} />
-                        <Button variant='outlined' style={{ marginTop: '20px', marginRight: '20px', color: '#206955', borderColor: '#206955' }} onClick={handleBack}>Voltar</Button>
+                        <Button variant='outlined' style={{ marginTop: '20px', marginRight: '20px', color: '#62724E', borderColor: '#62724E' }} onClick={handleBack}>Voltar</Button>
                         {/* <Button variant='contained' style={{ marginTop: '20px' }} onClick={handleContinue}>Continuar</Button> */}
                         </>
                     )}

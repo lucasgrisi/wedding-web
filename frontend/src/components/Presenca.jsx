@@ -145,11 +145,11 @@ const Presenca = () => {
             )
         } else if (editMode) {
             return (
-                <Button variant='contained' style={{ width: '75%', margin: 'auto', marginTop: '20px', backgroundColor: '#206955' }} onClick={() => callEdit()}>Atualizar</Button>
+                <Button variant='contained' style={{ width: '75%', margin: 'auto', marginTop: '20px', backgroundColor: '#62724E' }} onClick={() => callEdit()}>Atualizar</Button>
             )
         } else {
             return (
-                <Button variant='contained' style={{ width: '75%', margin: 'auto', marginTop: '20px', backgroundColor: '#206955' }} onClick={() => callConfirm()}>Confirmar</Button>
+                <Button variant='contained' style={{ width: '75%', margin: 'auto', marginTop: '20px', backgroundColor: '#62724E' }} onClick={() => callConfirm()}>Confirmar</Button>
             )
         }
     }
@@ -158,7 +158,7 @@ const Presenca = () => {
         if (!confirmed) {
             return (
                 <Grid item xs={12}>
-                    <Typography style={{ display: 'flex', justifyContent: 'center', color:'#206955' }} fontFamily="Simonetta" variant={isMobile ? "h4" : "h3"}>Confirme Presença</Typography>
+                    <Typography style={{ display: 'flex', justifyContent: 'center', color:'#62724E' }} fontFamily="Simonetta" variant={isMobile ? "h4" : "h3"}>Confirme Presença</Typography>
                 </Grid>
             )
         }
@@ -184,7 +184,7 @@ const Presenca = () => {
                     </Typography>
                 </Grid>
                 <Grid xs={12} sx={{ marginTop: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                    <Button variant='contained' style={{ backgroundColor: '#206955', marginLeft: '10px' }} onClick={() => handleGiftClick()}>Opções de presentes</Button>
+                    <Button variant='contained' style={{ backgroundColor: '#62724E', marginLeft: '10px' }} onClick={() => handleGiftClick()}>Opções de presentes</Button>
                 </Grid>
                 </>
             )
@@ -197,8 +197,8 @@ const Presenca = () => {
                     </Typography>
                 </Grid>
                 <Grid xs={12} sx={{ marginTop: '20px', display: 'flex', justifyContent: 'center' }}>
-                    <Button variant='outlined' style={{ color: '#206955', borderColor: '#206955', marginRight: '10px' }} onClick={() => handleBack()}>Voltar</Button>
-                    <Button variant='contained' style={{ backgroundColor: '#206955', marginLeft: '10px' }} onClick={() => handleYesEdit()}>Sim</Button>
+                    <Button variant='outlined' style={{ color: '#62724E', borderColor: '#62724E', marginRight: '10px' }} onClick={() => handleBack()}>Voltar</Button>
+                    <Button variant='contained' style={{ backgroundColor: '#62724E', marginLeft: '10px' }} onClick={() => handleYesEdit()}>Sim</Button>
                 </Grid>
                 </>
             )

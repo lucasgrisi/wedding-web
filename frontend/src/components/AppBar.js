@@ -45,7 +45,7 @@ function ResponsiveAppBar({ pages }) {
           aria-haspopup="true"
           onClick={handleOpenCart}
           
-          style={{ color: '#206955' }}
+          style={{ color: '#62724E' }}
         >
           <Badge badgeContent={cartCount} color="secondary">
             <ShoppingCartIcon />
@@ -62,7 +62,7 @@ function ResponsiveAppBar({ pages }) {
     if (width > 900) {
       
       return (
-        <AppBar position="static" style={{ backgroundColor: '#34dbb100' }}>
+        <AppBar position="relative" style={{ backgroundColor: '#34dbb100' }}>
           <Container maxWidth="xl">
             <Toolbar disableGutters>
 

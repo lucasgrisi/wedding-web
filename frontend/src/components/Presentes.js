@@ -200,24 +200,24 @@ const Presentes = () => {
                             (cartInfo.filter(item => item.id === card.id).length > 0) ? (
                             <>
                                 <Grid item xs={3}>
-                                    <Button style={{ margin: 'auto', width: '100%', fontFamily: "Simonetta", color: '#206955', borderColor: '#206955' }} onClick={() => handleRmItemQtd(card.id)} variant='outlined'>-</Button>
+                                    <Button style={{ margin: 'auto', width: '100%', fontFamily: "Simonetta", color: '#62724E', borderColor: '#62724E' }} onClick={() => handleRmItemQtd(card.id)} variant='outlined'>-</Button>
                                 </Grid>
                                 <Grid item xs={6}>
-                                    <Typography style={{ margin: 'auto', width: '100%', fontFamily: "Simonetta", color: '#206955', textAlign: 'center' }}>{cartInfo.filter(item => item.id === card.id)[0].buyQtd}</Typography>
+                                    <Typography style={{ margin: 'auto', width: '100%', fontFamily: "Simonetta", color: '#62724E', textAlign: 'center' }}>{cartInfo.filter(item => item.id === card.id)[0].buyQtd}</Typography>
                                 </Grid>
                                 <Grid item xs={3}>
-                                    <Button style={{ margin: 'auto', width: '100%', fontFamily: "Simonetta", color: '#206955', borderColor: '#206955' }} onClick={() => handleAddItemQtd(card.id)} variant='outlined'>+</Button>
+                                    <Button style={{ margin: 'auto', width: '100%', fontFamily: "Simonetta", color: '#62724E', borderColor: '#62724E' }} onClick={() => handleAddItemQtd(card.id)} variant='outlined'>+</Button>
                                 </Grid>
                                 <Grid item xs={3}>
                                     <Button style={{ margin: 'auto', width: '100%', fontFamily: "Simonetta", color: '#A40000', borderColor: '#A40000' }} onClick={() => handleRemoveFromCart(card.id)} variant='outlined'><DeleteIcon style={{ color: '#A40000' }}/></Button>
                                 </Grid>
                                 <Grid item xs={9}>
-                                    <Button style={{ margin: 'auto', width: '100%', fontFamily: "Simonetta", backgroundColor: '#206955' }} onClick={() => navigator('/checkout')} variant='contained'>Ir para o carrinho</Button>
+                                    <Button style={{ margin: 'auto', width: '100%', fontFamily: "Simonetta", backgroundColor: '#62724E' }} onClick={() => navigator('/checkout')} variant='contained'>Ir para o carrinho</Button>
                                 </Grid>
                             </>
                             ) : (
                             <Grid item xs={12}>
-                                <Button style={{ margin: 'auto', width: '100%', fontFamily: "Simonetta", color: '#206955', borderColor: '#206955' }} onClick={() => handleAddToCart(card.id)} variant='outlined'>Presentear</Button>
+                                <Button style={{ margin: 'auto', width: '100%', fontFamily: "Simonetta", color: '#62724E', borderColor: '#62724E' }} onClick={() => handleAddToCart(card.id)} variant='outlined'>Presentear</Button>
                             </Grid>
                             )
                         ) : (
@@ -253,7 +253,7 @@ const Presentes = () => {
         <Grid container spacing={1.5} direction="row" justifyContent="center" alignItems="center" style={{ marginTop: '50px' }}>
             <Grid item xs={4}></Grid>
             <Grid item xs={4}>
-                <Typography style={{ display: 'flex', justifyContent: 'center', color: '#206955' }} fontFamily="Simonetta" variant="h3">Presentes</Typography>
+                <Typography style={{ display: 'flex', justifyContent: 'center', color: '#62724E' }} fontFamily="Simonetta" variant="h3">Presentes</Typography>
             </Grid>
             <Grid item xs={4}></Grid>
             { isMobile ? (

@@ -14,12 +14,12 @@ import Planta2 from '../assets/planta2.png';
 
 const Evento = () => {
     const position = {lat: -7.9482409, lng: -35.0209291};
+    const isMobile = window.innerWidth < 900;
 
-    return (
-    <div style={{ flexGrow: 1 }}>
-        <Container style={{ maxWidth: '95vw', maxHeight: '95vh' }}>
-
-        <Grid container sx={{ position: 'relative' }}>
+    function renderBg() {
+        if (!isMobile) {
+            return (
+            <Grid container sx={{ position: 'relative' }}>
                 <Box
                     component="img"
                     src={Planta2}
@@ -54,6 +54,23 @@ const Evento = () => {
                     }}
                 />
             </Grid>
+            )
+        } else {
+            return (
+            <Grid container sx={{ position: 'relative' }}>
+                <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center', position: 'relative', zIndex: 1, mt: 4 }}>
+                    <Typography style={{ display: 'flex', justifyContent: 'center', color: '#62724E' }} fontFamily="Simonetta" variant="h4">Cerimônia</Typography>
+                </Grid>
+            </Grid>
+            )
+        }
+    }
+
+    return (
+    <div style={{ flexGrow: 1 }}>
+        <Container style={{ maxWidth: '95vw', maxHeight: '95vh' }}>
+
+        {renderBg()}
         {/* <Grid container spacing={1.5} direction="row" justifyContent="center" alignItems="center" style={{ marginTop: '50px' }}>
             <Grid item xs={4}></Grid>
             <Grid item xs={4}>
@@ -61,7 +78,7 @@ const Evento = () => {
             </Grid>
             <Grid item xs={4}></Grid>
         </Grid> */}
-        <Grid container spacing={1.5} direction="row" justifyContent="center" alignItems="center" style={{ marginTop: '50px', padding: '30px', paddingBottom: '0' }}>
+        <Grid container spacing={1.5} direction="row" justifyContent="center" alignItems="center" style={{ marginTop: '20px', padding: '30px', paddingBottom: '0' }}>
         {/* <Grid item xs={5}>
             <img src={PierImg} alt="Pier 31" style={{ maxHeight: '400px' }} />
         </Grid> */}

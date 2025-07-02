@@ -110,7 +110,7 @@ const Home = () => {
     <div style={{ flexGrow: 1 }} className='container'>
         <Container className='overlay' style={{ margin:0, maxWidth: '100vw' }}>
             {renderBg()}
-        <Grid container spacing={1.5}direction="row" justifyContent="center" alignItems="center" style={{ padding: '50px' }}>
+        <Grid container spacing={1.5}direction="row" justifyContent="center" alignItems="center" style={{ padding: '40px' }}>
             {/* <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <img src={usImg} style={{ maxHeight: '500px' }}/>
             </Grid> */}

@@ -5,7 +5,7 @@ from mongo import db
 
 load_dotenv()
 
-CONTACTS = ['lucasgrisii@gmail.com']
+CONTACTS = ['leticia0bandeira@gmail.com', 'diogorcs@hotmail.com']
 
 
 def fill_template(items, from_name, email, message):
@@ -37,8 +37,12 @@ def fill_template(items, from_name, email, message):
 
 
 def send_email(ref_id):
+    if not ref_id:
+        return None
     # get data from db
     buy = db.buys.find_one({'buy_ref_id': ref_id})
+    if not buy:
+        return None
 
     # Prepare the email
     message = emails.html(

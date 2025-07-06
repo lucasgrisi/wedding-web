@@ -165,7 +165,7 @@ export default function CheckOut() {
     }
 
     useEffect(() => {
-        initMercadoPago('APP_USR-95f8cf20-8f0c-4f11-9ea5-8027c2aa151a', {locale: 'pt-BR'});
+        initMercadoPago(process.env.REACT_APP_MERCADOPAGO_PUBLIC_KEY, {locale: 'pt-BR'});
         // console.log(cartInfo);
         localStorage.setItem('UserInfoCache', JSON.stringify(userInfo));
         localStorage.setItem('CartCache', JSON.stringify(cartInfo));

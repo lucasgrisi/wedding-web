@@ -14,9 +14,9 @@ def create_preference(items):
     preference_data = {
         "items": items,
         "back_urls": {
-            "success": "https://www.grisibruna.com/gratidao",
-            "failure": "https://www.grisibruna.com/gratidao",
-            "pending": "https://www.grisibruna.com/gratidao"
+            "success": "https://www.marialeticiaediogo.com/gratidao",
+            "failure": "https://www.marialeticiaediogo.com/gratidao",
+            "pending": "https://www.marialeticiaediogo.com/gratidao"
         },
         "auto_return": "approved",
         "external_reference": buy_ref_id
@@ -61,6 +61,12 @@ def update_buy_status(data):
         print(f"KeyError: {e}")
         return False
 
+    # Check if item is already approved
+    db_item = db.buys.find_one({'buy_ref_id': ref_id})
+    buy_status = db_item.get('buy_status', None)
+    if buy_status == 'approved':
+        return False
+    
     # Update buy status
     db.buys.update_one(
         {'buy_ref_id': ref_id},

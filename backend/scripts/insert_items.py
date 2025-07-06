@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 import csv
 
-client = MongoClient("mongodb://localhost:27017")
+client = MongoClient("mongodb://mongo:27017")
 db = client["casamento"]
 
 collection = db.get_collection("items")

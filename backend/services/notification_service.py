@@ -2,6 +2,7 @@ import os
 import emails
 from dotenv import load_dotenv
 from mongo import db
+from time import sleep
 
 load_dotenv()
 
@@ -53,6 +54,7 @@ def send_email(ref_id):
     )
     for contact in CONTACTS:
         # Send the email
+        print(f"Sending email notification to {contact}")
         message.send(
             to=contact,
             smtp={
@@ -64,3 +66,4 @@ def send_email(ref_id):
                 "tls": True,
             },
         )
+        sleep(1.5)
